@@ -81,7 +81,7 @@ def store_score():
     with open(FNAME, "wb") as pf:
         pickle.dump(data, pf)
 
-    webbrowser.open('http://localhost:5000/showhighscores')
+    webbrowser.open_new_tab('http://localhost:5000/showhighscores')
     return "Your highscore has been recorded."
 #==================================================================================================================================
 
