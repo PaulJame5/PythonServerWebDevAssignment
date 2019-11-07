@@ -3,6 +3,7 @@ import random
 import os
 import pickle
 import time
+import webbrowser
 
 #Global variables
 #=================
@@ -80,7 +81,8 @@ def store_score():
     with open(FNAME, "wb") as pf:
         pickle.dump(data, pf)
 
-    return "Your highscore has been recorded. Thanks for playing"
+    webbrowser.open('http://localhost:5000/showhighscores')
+    return "Your highscore has been recorded."
 #==================================================================================================================================
 
 
