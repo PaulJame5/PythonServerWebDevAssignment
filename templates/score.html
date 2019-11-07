@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<p>
+Guess the number game!  The hidden number is: {{ the_hiddenNumber }}.
+
+{{the_hint}} than your last guess
+
+</p>
+<form method="POST" action="/checkGuess">
+
+	<p>
+	Guess the number: <input type="number" name="inputNumberPlayer">
+	</p>
+	<input type="HIDDEN" name="score" value="{{ the_score }}">  
+	<p>
+	<input type="SUBMIT" value="Submit">
+	</p>
+
+</form>
+
+{% endblock %}
